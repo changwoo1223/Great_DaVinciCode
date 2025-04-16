@@ -1,20 +1,18 @@
 import './App.css'
-import Button from './components/Button/Button.jsx'
-import WaitingRoom from './pages/waitingRoom.jsx';
+import Lobby from './pages/Lobby.jsx';
+import Play from './pages/Play.jsx';
 import { useState } from "react";
 
 function App() {
-  const [page, setPage] = useState("waitingRoom"); // 현재 페이지 상태
-  const play = () => {
-    setPage("play");
-  };
-  
+  const [page, setPage] = useState("lobby"); // 현재 페이지 상태
+
   return (
-    <div className="">
-      {page === "waitingRoom" && <WaitingRoom content={"다빈치코드"} />}
-      {page === "play" && <></>}
+    <div>
+      {page === "lobby" && <Lobby content={"다빈치코드"} setPage={setPage} />}
+      {page === "play" && <Play />}
     </div>
   );
 }
 
-export default App
+export default App;
+

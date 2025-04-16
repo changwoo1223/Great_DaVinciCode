@@ -1,0 +1,9 @@
+.hand {
+    display: flex;
+    flex-direction: row;  /* 가로로 정렬 */
+    gap: 0px;
+    padding: 10px;
+    justify-content: center;
+    flex-wrap: wrap;      /* 넘치면 줄바꿈 */
+
+}
